@@ -19,7 +19,7 @@ export class CurrencyChoiseComponent implements OnInit {
   
   userSelect: String;
 
-  monitoringValute: IValute[];
+  monitoringValute: IValute[] = [];
   
   constructor(private _GetExchangeService: GetexchangeService) {}
 

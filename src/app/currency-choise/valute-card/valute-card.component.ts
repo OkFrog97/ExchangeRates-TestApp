@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { IValute } from '../ivalute';
 
 @Component({
   selector: 'app-valute-card',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ValuteCardComponent implements OnInit {
 
+  @Input() Valutes: IValute;
+  
   constructor() { }
 
   ngOnInit(): void {
