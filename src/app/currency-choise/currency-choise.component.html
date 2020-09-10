@@ -1,9 +1,10 @@
 
 <form>
-    <select name="valuteChoise" id="valuteChoise" >
-        <option disabled> Выберите валюту </option>
-        <option *ngFor='let i of voluteInfo' value={{i}}> {{i}} </option>
+    <select name="valuteChoise" id="valuteChoise" [formControl]='valuteChoiseControle'>
+        <option disabled="disabled"> Выберите валюту </option>
+        <option *ngFor='let i of valuteNames' value={{i.name}}> {{i.name}} </option>
     </select>
-    <button>Следить</button>
+    <button (click)="monitore()">Следить</button>
 </form>
 
+<app-valute-card></app-valute-card>

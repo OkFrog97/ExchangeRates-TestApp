@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { GetexchangeService } from './getexchange.service';
 import { TmplAstBoundAttribute } from '@angular/compiler';
+import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
+import { FormControl } from '@angular/forms';
+import { IValute } from './ivalute';
 
 
 @Component({
@@ -10,17 +13,27 @@ import { TmplAstBoundAttribute } from '@angular/compiler';
 })
 export class CurrencyChoiseComponent implements OnInit {
   
+  public valuteNames = [];
+
+  valuteChoiseControle: FormControl;
   
-  public voluteInfo = [];
+  userSelect: String;
+
+  monitoringValute: IValute[];
   
   constructor(private _GetExchangeService: GetexchangeService) {}
 
   ngOnInit(): void { 
-    this._GetExchangeService.getExchange().subscribe((data) => {
-       for (let i in data['Valute']){
-          this.voluteInfo.push( data['Valute'][i]['Name'] );
-       }
-    });
+    this.valuteNames = this._GetExchangeService.getExchange().valute;
+    this.valuteChoiseControle = new FormControl;
+    this.valuteChoiseControle.valueChanges.subscribe( (value) => this.userSelect = value );
   }
 
+  monitore(): void {
+    if (this.userSelect){
+      this.monitoringValute.push(this.valuteNames.find( (item) => item.name == this.userSelect));
+    }
+  }
+
+  
 }
