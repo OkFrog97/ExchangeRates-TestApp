@@ -1,5 +1,13 @@
-<ul *ngFor="let v of Valutes">
-    <li>{{v.name}}</li>
-    <li>{{v.nominal}}</li>
-    <li>{{v.value}}</li>
-</ul>
+
+<div class="cardField">
+    <div class="card" *ngFor="let v of Valutes">
+        <div class="card-header">
+            {{v.name}}
+        </div>
+        <div class="card-body">
+            <p>Наименование: {{v.name}}</p>
+            <p>Номина: {{v.nominal}}</p>
+            <p>Цена: {{v.value}}</p>
+        </div>
+    </div>
+</div>

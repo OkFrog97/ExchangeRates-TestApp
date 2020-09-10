@@ -7,6 +7,7 @@ import { CurrencyChoiseComponent } from './currency-choise/currency-choise.compo
 import { GetexchangeService } from './currency-choise/getexchange.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ValuteCardComponent } from './currency-choise/valute-card/valute-card.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ValuteCardComponent } from './currency-choise/valute-card/valute-card.c
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
+    NgbModule,
   ],
   providers: [
     GetexchangeService,

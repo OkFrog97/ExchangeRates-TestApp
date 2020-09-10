@@ -1,15 +1,14 @@
 # Exchange Rates App.
+
+### Приложение для запроса акутального обменного курса Российского Рубля
 ------
 
+Используемые технологии:
+
+*git;
+*Typescript;
+*Angular 10;
+*Bootstrap 4;
 
 
 
-
-------
-## ExchangeRatesApp
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.8.
-
-### Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
