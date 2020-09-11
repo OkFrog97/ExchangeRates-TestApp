@@ -5,10 +5,10 @@
 
 Используемые технологии:
 
-*git;
-*Typescript;
-*Angular 10;
-*Bootstrap 4;
+- git;
+- Typescript;
+- Angular 10;
+- Bootstrap 4;
 
 
 
