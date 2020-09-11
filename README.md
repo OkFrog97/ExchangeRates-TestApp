@@ -10,5 +10,8 @@
 - Angular 10;
 - Bootstrap 4;
 
+Пример приложения:
+
+![](./img/Exmpl.png 500x)
 
 
