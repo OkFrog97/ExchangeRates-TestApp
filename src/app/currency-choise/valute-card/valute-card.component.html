@@ -8,6 +8,7 @@
             <p>Наименование: {{v.name}}</p>
             <p>Номинал: {{v.nominal}}</p>
             <p>Цена: {{v.value}}</p>
+            <button (click)="deliteCard(v.name)" class="btn btn-light"><span class="far fa-trash-alt"></span></button>
         </div>
     </div>
 </div>

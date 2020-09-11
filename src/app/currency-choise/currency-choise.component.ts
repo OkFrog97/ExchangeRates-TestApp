@@ -35,5 +35,11 @@ export class CurrencyChoiseComponent implements OnInit {
     }
   }
 
+  deliteCard(delitedElementName: string): void {
+    this.monitoringValute.splice( this.monitoringValute.findIndex( (item) => item.name == delitedElementName), 1);
+    console.log(this.valuteNames.findIndex( (item) => item.name == delitedElementName))
+    console.log(this.monitoringValute) 
+  }
+
   
 }
